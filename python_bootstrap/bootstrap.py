@@ -150,6 +150,8 @@ def bootstrap(directory):
         "git add .flake8 .pre-commit-config.yaml .python-version  README.md poetry.lock pyproject.toml .gitignore"
     )
     run_command("git commit -m 'Initial commit'")
+    run_command("git branch -M main")  # rename to main branch
+
     print("✅ Initial structure committed in git.")
 
     print("✅ Bootstrap completed successfully.")
