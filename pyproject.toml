@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "python-bootstrap"
+version = "0.1.0"
+description = ""
+authors = ["Lachezar Bozhkov <lachezar@dext.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.7.1"
+black = "^24.4.2"
+isort = "^5.13.2"
+ruff = "^0.4.8"
+pylint = "^3.2.3"
+flake8 = "^7.0.0"
+ipykernel = "^6.29.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+atomic = true
+line_length = 120
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+order_by_type = true
+case_sensitive = true
+skip=[".cache"]
