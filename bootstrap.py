@@ -136,18 +136,10 @@ def bootstrap(directory):
     print("✅ pre-commit installed.")
 
     install_packages("black", "isort", "ruff", "pylint", "flake8", dev=True)
-    # install_packages(
-    #     "torch", "transformers", "scikit-learn", "pandas", "numpy", "scipy", "tqdm"
-    # )
-    # install_packages(
-    #     "ipywidgets",
-    #     "pytorch-lightning",
-    #     "seaborn",
-    #     "matplotlib",
-    #     "torchmetrics",
-    #     "jupyterlab",
-    # )
-    # install_packages("psycopg2", "sqlalchemy")
+    install_packages("torch", "transformers", "scikit-learn", "pandas", "numpy", "scipy", "tqdm")
+    install_packages("pytorch-lightning", "seaborn", "matplotlib", "torchmetrics", dev=True)
+    install_packages("jupyterlab", "ipywidgets", dev=True)
+    install_packages("psycopg2", "sqlalchemy")
     print("✅ Default packages installed.")
 
     run_command("poetry add --group dev ipykernel")
